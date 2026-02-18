@@ -30,6 +30,8 @@ Selecting the _Stable_ option downloads a file called _godot-docs-html-stable.zi
 ## Cleaning the Data
 Due to the nature of how LLMs retrieve data, our strategy will involve converting this documentation database into a vector database. Our current dataset is almost entirely formatted in HTML, which includes tags and elements that may be useful for a web browser, but represent superfluous noise to an LLM. The `html_to_markdown.py` script uses Beautifulsoup and markdownify to sanitize the HTML elements and convert the .html files into a clean markdown format.
 
-https://github.com/user-attachments/assets/bb4002cf-8d44-4046-aae0-fa0707a4d1e6
+https://github.com/user-attachments/assets/6aeb3978-489a-4fab-9c34-2cc5478cfcc1
+
+
 
 
