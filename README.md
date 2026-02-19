@@ -1,8 +1,8 @@
 # Configuring a Local LLM and Connecting it to a Retrieval Augmented Generation (RAG) Database
 Creating my GDScript coding companion
 
-## Project Synopsis
-For this project, I will be downloading Godot's offline documentation for their GDScript coding language. I will then clean that data, separate it logically into chunks, embed those chunks, and create a vector database which a locally-run LLM will reference in its role as my coding assistant.
+## Why Am I Doing This?
+I want a local coding assistant to assist me with learning programming languages (in this case, GDScript). This project gives me the opportunity to learn more about the configuration and deployment of local AI models while building towards a useful tool I can use for my game development hobby. This writeup documents my experience learning about data cleaning, chunking, embedding, and creating a vector database to serve as a RAG for a local LLM. I aim to make it as reproduceable as possible so readers can follow along in their own environments.
 
 ## Resources
 * [Godot's Offline Documentation Repository](https://docs.godotengine.org/en/stable/index.html)
@@ -10,8 +10,8 @@ For this project, I will be downloading Godot's offline documentation for their 
 * [Beautifulsoup Python Library](https://pypi.org/project/beautifulsoup4/)
 * [ChromaDB](https://www.trychroma.com/)
 
-## Cleaning the Data
-Extracting the contents of the .zip file yields 1,570 .html files, consisting of tutorials, references, and explanations of various elements of Godot and GDScript. These files are easily interpreted by browsers, but not so great for large language models. They contain HTML markup tags which will pollute the plain, natural language we're aiming for in our vector database. Using tools like beautifulsoup and markdownify, we can identify and prune these extraneous elements and convert the .html files into a more processable markdown format. Below are snippets of the same file before and after processing with `html_to_markdown.py`.
+## Step One: Cleaning the Data
+Extracting the contents of the .zip file we downloaded from Godot's documentation website yields 1,570 .html files, consisting of tutorials, references, and explanations of various elements of Godot and GDScript. These files are easily interpreted by browsers, but not so great for large language models. They contain HTML markup tags which will pollute the plain, natural language we're aiming for in our vector database. Using tools like beautifulsoup and markdownify, we can identify and prune these extraneous elements and convert the .html files into a more processable markdown format. Below are snippets of the same file before and after processing with `html_to_markdown.py`.
 
 #### Raw HTML File:
 
