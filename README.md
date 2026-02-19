@@ -6,8 +6,12 @@ I want a local coding assistant to assist me with learning programming languages
 
 ## Resources
 * [Godot's Offline Documentation Repository](https://docs.godotengine.org/en/stable/index.html)
-* [Markdownify Python Library](https://pypi.org/project/markdownify/)
-* [Beautifulsoup Python Library](https://pypi.org/project/beautifulsoup4/)
+
+
+#### Python Libraries:
+* [Markdownify](https://pypi.org/project/markdownify/)
+* [Beautifulsoup](https://pypi.org/project/beautifulsoup4/)
+* [Sentence-transformers](https://pypi.org/project/sentence-transformers/)
 * [ChromaDB](https://www.trychroma.com/)
 
 ## Step One: Cleaning the Data
