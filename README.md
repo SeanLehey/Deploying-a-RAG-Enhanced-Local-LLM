@@ -89,3 +89,8 @@ Open up a command prompt window, navigate to where the script is located, and ty
 
 <img width="2560" height="1600" alt="WebAppFirstLook" src="https://github.com/user-attachments/assets/a182aa29-53c5-410b-9e45-5bd1040d6557" />
 
+The RAG allows us to ask questions about Godot and GDScript without laboriously providing language and engine context, a lengthy system prompt, and other time-wasters we'd encounter with an unspecialized LLM. Let's test it with our first basic question without mentioning the engine or language.
+
+<img width="2560" height="1600" alt="image" src="https://github.com/user-attachments/assets/a44a2a60-1bf3-4169-a833-bd4818e2bffc" />
+
+Voilà! Our local, RAG-assisted LLM is now working perfectly. We can even see the 
