@@ -66,9 +66,23 @@ With our fully converted documentation files, we can now process those further b
 
 Once the script has run, we will see a new `godot_docs.lance` file representing our vector database in our project folder. This is the beating heart of our RAG.
 
-<img width="1536" height="960" alt="LanceDBFolder" src="https://github.com/user-attachments/assets/f12679c7-540e-4dcb-9690-6a63297bccdf" />
+<img width="1180" height="387" alt="image" src="https://github.com/user-attachments/assets/a4e4a09a-8f08-41b6-ad49-d62df77c6245" />
 
+## Step Three: Model Selection, Web Application, and Tying it all Together
 
-## Step Three: 
+Now is the time to download Ollama if you haven't already. The model we're using for this project is `qwen3-coder:30b`.
+
+The two files we're using for this portion of the project are `query_server.py` and `interface.html`. The query server file contains the backend code enabling our model to interact with the visually-appealing local webapp represented by the interface file. The model's system prompt can be found in `query_server.py`. It reads as:
+
+```
+system_prompt = (
+        "You are a helpful Godot game engine assistant. "
+        "You are helping a developer who is coding in GDScript. "
+        "Answer questions using only the provided documentation context. "
+        "If the answer is not in the context, say so clearly."
+    )
+```
+
+This can be edited to your liking if, for instance, you're using C# and have chunked the documentation appropriately for that language instead.
 
 
