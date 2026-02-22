@@ -12,12 +12,12 @@ I want a local coding assistant to assist me with learning programming languages
 * [Markdownify](https://pypi.org/project/markdownify/)
 * [Beautifulsoup](https://pypi.org/project/beautifulsoup4/)
 * [Sentence-transformers](https://pypi.org/project/sentence-transformers/)
-* [ChromaDB](https://www.trychroma.com/)
+* LanceDB
 
 ## Step One: Cleaning the Data
 Extracting the contents of the .zip file we downloaded from Godot's documentation website yields 1,570 .html files, consisting of tutorials, references, and explanations of various elements of Godot and GDScript. These files are easily interpreted by browsers, but not so great for large language models. They contain HTML markup tags which will pollute the plain, natural language we're aiming for as we prepare to eventually embed the data into a vector database. Using tools like beautifulsoup and markdownify, we can identify and prune these extraneous elements and convert the .html files into a more processable markdown format. Below are snippets of the same file before and after processing with `html_to_markdown.py`.
 
-#### Raw HTML File:
+#### Raw HTML File
 
 ```
 <!DOCTYPE html>
@@ -40,7 +40,7 @@ random direction, and mo..." />
 
 ![ConvertingHTMLtoMD](https://github.com/user-attachments/assets/e5c5a8c6-e163-412a-9db8-567f3fb054bc)
 
-#### Processed File:
+#### Processed File
 
 ```
 # Creating the enemy
@@ -53,12 +53,17 @@ We'll create a `Mob` scene, which we can then *instance* to create any number
 of independent mobs in the game.
 ```
 
-## Step Two: Chunking and Embedding the Data / Ingest into LanceDB
+## Step Two: Chunking, Embedding, and Ingesting into LanceDB
 
 With our fully converted documentation files, we can now process those further by running our `chunk_and_embed` script. This script logically separates each file into a batch of chunks, embeds those chunks by assigning them unique numerical values, and then ingests those embeddings into LanceDB to be referenced by our LLM.
 
-(Embedding script GIF here)
+![ChunkAndEmbed](https://github.com/user-attachments/assets/c0411acc-669e-4da8-b4e2-ceee2695e3de)
 
-Once the script has run, we will see a new `godot_docs.lance` file representing our vector database in our project folder.
+Once the script has run, we will see a new `godot_docs.lance` file representing our vector database in our project folder. This is the beating heart of our RAG.
+
+<img width="1536" height="960" alt="LanceDBFolder" src="https://github.com/user-attachments/assets/f12679c7-540e-4dcb-9690-6a63297bccdf" />
+
+
+## Step Three: 
 
 
