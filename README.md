@@ -20,7 +20,7 @@ Lately, I've been wanting to create a local AI assistant to help me with learnin
 * [ollama](https://pypi.org/project/ollama/)
 
 ## Step One: Cleaning the Data
-Extracting the contents of the .zip file we downloaded from Godot's documentation website yields 1,570 .html files, consisting of tutorials, references, and explanations of various elements of Godot and GDScript. These files are easily interpreted by browsers, but not so great for large language models. They contain HTML markup tags which will pollute the plain, natural language we're aiming for as we prepare to eventually embed the data into a vector database. Using tools like beautifulsoup and markdownify, we can identify and prune these extraneous elements and convert the .html files into a more processable markdown format. Below are snippets of the same tutorial file before and after processing with `html_to_markdown.py`.
+Extracting the contents of the .zip file we downloaded from Godot's documentation website yields 1,570 .html files, consisting of tutorials, references, and explanations of various elements of Godot and GDScript. These files are easily interpreted by browsers, but they're not so great for retrieval-augmented generation. They contain HTML markup tags which will pollute the plain, natural language we're aiming for as we prepare to eventually embed the data into a vector database. Using tools like beautifulsoup and markdownify, we can identify and prune these extraneous elements and convert the .html files into a more legible markdown format. Below are snippets of the same tutorial file before and after processing with `html_to_markdown.py`.
 
 #### Raw HTML File
 
