@@ -1,18 +1,23 @@
 # Configuring a Local LLM and Connecting it to a Retrieval Augmented Generation (RAG) Database
 Creating my GDScript coding companion
 
+> [!NOTE]
+> The code in this project was developed collaboratively with Claude, Anthropic's AI assistant. I am not a software engineer and I do not claim to be an expert in Python. However, I believe it is important to understand the code Claude produces well enough to explain the function of each script and its constituent parts, rather than blindly run it as a black box solution. A more in-depth overview of my approach to AI tools can be found in my [AI ethics statement](https://github.com/SeanLehey/Personal-AI-Ethics-Statement). All of the planning, writing, code review, and execution of this project was done by me.
+
 ## About This Project
-I want a local coding assistant to assist me with learning programming languages (in this case, GDScript). This project gives me the opportunity to learn more about the configuration and deployment of local AI models while building towards a useful tool I can use for my game development hobby. This writeup documents my experience learning about data cleaning, chunking, embedding, and creating a vector database to serve as a RAG for a local LLM. I aim to make it as reproduceable as possible so readers can follow along in their own environments.
+I want a local coding assistant to assist me with learning programming languages (in this case, GDScript). This project gives me the opportunity to learn more about the configuration and deployment of local AI models while building a useful tool I can use for my game development hobby. This writeup documents my experience learning about data cleaning, chunking, embedding, and creating a vector database to serve as a RAG for a local LLM. It's also a good exercise in planning and executing Python scripts in collaboration with Claude, Anthropic's large language model. I aim to make this project as reproduceable as possible so readers can follow along in their own environments.
 
 ## Resources
 * [Godot's Offline Documentation Repository](https://docs.godotengine.org/en/stable/index.html)
-
+* [VSCode](https://code.visualstudio.com/)
+* [Claude Sonnet 4.6](https://claude.ai/)
 
 #### Python Libraries
-* [Markdownify](https://pypi.org/project/markdownify/)
-* [Beautifulsoup](https://pypi.org/project/beautifulsoup4/)
-* [Sentence-transformers](https://pypi.org/project/sentence-transformers/)
-* LanceDB
+* [markdownify](https://pypi.org/project/markdownify/)
+* [beautifulsoup4](https://pypi.org/project/beautifulsoup4/)
+* [sentence-transformers](https://pypi.org/project/sentence-transformers/)
+* [lancedb](https://pypi.org/project/lancedb/)
+* [ollama](https://pypi.org/project/ollama/)
 
 ## Step One: Cleaning the Data
 Extracting the contents of the .zip file we downloaded from Godot's documentation website yields 1,570 .html files, consisting of tutorials, references, and explanations of various elements of Godot and GDScript. These files are easily interpreted by browsers, but not so great for large language models. They contain HTML markup tags which will pollute the plain, natural language we're aiming for as we prepare to eventually embed the data into a vector database. Using tools like beautifulsoup and markdownify, we can identify and prune these extraneous elements and convert the .html files into a more processable markdown format. Below are snippets of the same tutorial file before and after processing with `html_to_markdown.py`.
