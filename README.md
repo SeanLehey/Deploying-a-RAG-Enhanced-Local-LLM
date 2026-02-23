@@ -60,6 +60,12 @@ of independent mobs in the game.
 
 ## Step Two: Chunking, Embedding, and Ingesting into LanceDB
 
+#### Chunking Strategy
+
+Chunking is the act of splitting text into discrete "chunks" of related text. Chunking strategies vary depending on the nature of the data and the intended use case. For this project, we will be chunking the Godot documentation in a structure-based fashion rather than a fixed-size fashion. This is because the documentation is already logically separated into distinct sections, unlike other raw text sources which may not be. Additionally, due to the different formatting styles of `class` documentation versus `tutorial`, `getting started`, and other documentation types, we will be using separate chunking strategies for each group of files.
+
+#### Execution
+
 With our fully converted documentation files, we can now process those further by running our `chunk_and_embed` script. This script logically separates each file into a batch of chunks, embeds those chunks by assigning them unique numerical values, and then ingests those embeddings into LanceDB to be referenced by our LLM.
 
 ![ChunkAndEmbed](https://github.com/user-attachments/assets/c0411acc-669e-4da8-b4e2-ceee2695e3de)
