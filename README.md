@@ -1,4 +1,4 @@
-# Configuring a Local LLM and Connecting it to a Retrieval Augmented Generation (RAG) Database
+# Deploying a RAG-Enhanced Local LLM
 _Project Completed in February 2026_
 
 > [!NOTE]
