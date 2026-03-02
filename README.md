@@ -58,6 +58,7 @@ choose a random direction, and move in a straight line.
 We'll create a `Mob` scene, which we can then *instance* to create any number
 of independent mobs in the game.
 ```
+As we can see, the HTML file was converted to a clean, legible, markdown format that will be easier to chunk in the next step.
 
 ## Step Two: Chunking, Embedding, and Ingesting into LanceDB
 
