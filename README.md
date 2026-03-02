@@ -101,7 +101,7 @@ Our retrieval-augmented approach allows us to ask questions about Godot and GDSc
 
 <img width="2560" height="1600" alt="SimpleQuestion" src="https://github.com/user-attachments/assets/afc6dcc0-0765-45f6-8a96-313344741864" />
 
-Voilà! Our local, RAG-assisted LLM is now working perfectly. Towards the bottom of the screen, we can even see the source documentation files the LLM is referencing thanks to the metadata we attached to the chunk via `chunk_and_embed.py`.
+Voilà! Our local, RAG-enhanced LLM is now working perfectly. Towards the bottom of the screen, we can even see the source documentation files the LLM is referencing thanks to the metadata we attached to the chunk via `chunk_and_embed.py`.
 
 Let's ask it to produce some sample GDScript code.
 
