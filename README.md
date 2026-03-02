@@ -76,7 +76,7 @@ Once the script has run, we will see a new `godot_docs.lance` file representing 
 
 <img width="1180" height="387" alt="image" src="https://github.com/user-attachments/assets/a4e4a09a-8f08-41b6-ad49-d62df77c6245" />
 
-## Step Three: Model Selection, Web Application, and Tying it all Together
+## Step Three: Model Selection, Web Application, and Validation
 
 Now is the time to download Ollama if you haven't already. The model we're using for this project is `qwen3-coder:30b`.
 
