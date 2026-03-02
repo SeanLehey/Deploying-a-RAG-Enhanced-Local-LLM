@@ -72,7 +72,7 @@ With our fully converted documentation files, we can now process those further b
 
 ![ChunkAndEmbed](https://github.com/user-attachments/assets/c0411acc-669e-4da8-b4e2-ceee2695e3de)
 
-Once the script has run, we will see a new `godot_docs.lance` file representing our vector database in our project folder. This is the beating heart of our RAG.
+Once the script has run, we will see a new `godot_docs.lance` file representing our vector database in our project folder. This will be the engine for our retrieval-augmented approach.
 
 <img width="1180" height="387" alt="image" src="https://github.com/user-attachments/assets/a4e4a09a-8f08-41b6-ad49-d62df77c6245" />
 
