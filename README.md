@@ -109,7 +109,7 @@ Let's ask it to produce some sample GDScript code.
 
 <img width="2559" height="941" alt="ComplexQuestionPart2" src="https://github.com/user-attachments/assets/1956abea-6016-4bd8-bd94-3e476ae4bc5e" />
 
-As we can see, the LLM is providing legitimate GDScript code for implementing WASD movement for our 2D character. It even provides supplementary information on assigning input maps in the project settings - a crucial step and another indicator that our RAG is working as intended.
+As we can see, the LLM is providing legitimate GDScript code for implementing WASD movement for our 2D character. It even provides supplementary information on assigning input maps in the project settings - a crucial step and another indicator that our retrieval pipeline is working as intended.
 
 ## Final Thoughts
 In this project, we cleaned, chunked, embedded, and connected Godot's offline GDScript documentation repository to a local LLM, and demonstrated that it works as intended. The most important takeaway is that this methodology can be applied to other databases as well. Using textbooks, knowledge bases, and other long-form written content will achieve the same effect for various learning goals.
