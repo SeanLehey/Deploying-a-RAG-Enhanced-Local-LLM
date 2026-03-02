@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GDScript Assistant</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
@@ -63,10 +63,10 @@
   }
 
   .header-text h1 {
-    font-size: 16px;
-    font-weight: 800;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    font-family: 'Libre Baskerville', serif;
     color: var(--text);
   }
 
@@ -286,12 +286,12 @@
   }
 
   .welcome h2 {
-    font-size: 24px;
-    font-weight: 800;
+    font-size: 26px;
+    font-weight: 600;
     margin-bottom: 10px;
-    background: linear-gradient(135deg, var(--accent), var(--accent2));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-family: 'Libre Baskerville', serif;
+    color: #2e6e9e;
+    letter-spacing: 0.01em;
   }
 
   .welcome p {
@@ -414,7 +414,7 @@
   <div class="input-row">
     <textarea
       id="input"
-      placeholder="Ask a GDScript question..."
+      placeholder="Ask any GDScript question!"
       rows="1"
       onkeydown="handleKey(event)"
       oninput="autoResize(this)"
