@@ -6,6 +6,8 @@ from bs4 import BeautifulSoup
 source_dir = Path(r"C:\Users\Temporary\Documents\RAGProject\godot-docs-html-stable")
 output_dir = Path(r"C:\Users\Temporary\Documents\RAGProject\CleanedData")
 
+output_dir.mkdir(parents=True, exist_ok=True)
+
 html_files = list(source_dir.rglob("*.html"))
 total = len(html_files)
 
@@ -49,5 +51,6 @@ for i, html_file in enumerate(html_files, start=1):
     output_file = output_dir / html_file.with_suffix(".md").name
     output_file.write_text(markdown_content, encoding="utf-8")
     print(f"Converting {i} of {total}: {html_file.name}")
+
 
 print("Done!")
