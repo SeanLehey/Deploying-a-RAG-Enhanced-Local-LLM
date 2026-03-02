@@ -232,14 +232,15 @@
     font-size: 10px;
     padding: 3px 8px;
     border-radius: 4px;
-    background: #edeae4;
-    border: 1px solid var(--border);
-    color: var(--text-dim);
+    background: #e8f2f8;
+    border: 1px solid #b0cfe0;
+    color: #2e6e9e;
     white-space: nowrap;
   }
 
   .source-tag span {
-    color: var(--accent3);
+    color: #1d5278;
+    font-weight: 700;
   }
 
   /* Thinking indicator */
@@ -343,7 +344,7 @@
   }
 
   button {
-    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    background: #2e6e9e;
     border: none;
     border-radius: 10px;
     color: white;
@@ -414,7 +415,7 @@
   <div class="input-row">
     <textarea
       id="input"
-      placeholder="Ask any GDScript question!"
+      placeholder="Ask a GDScript question..."
       rows="1"
       onkeydown="handleKey(event)"
       oninput="autoResize(this)"
