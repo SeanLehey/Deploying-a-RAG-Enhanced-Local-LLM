@@ -93,19 +93,19 @@ This can be edited to your liking if, for instance, you're using C# and have chu
 
 Open up a command prompt window, navigate to where the script is located, and type `python query_server.py`. After you do this, go ahead and open `interface.html` with a browser of your choice. You should be presented with the following.
 
-<img width="2560" height="1600" alt="WebAppFirstLook" src="https://github.com/user-attachments/assets/a182aa29-53c5-410b-9e45-5bd1040d6557" />
+<img width="2560" height="1600" alt="WebUI" src="https://github.com/user-attachments/assets/d47b980f-e48e-4016-aa62-ac6288209544" />
 
 The RAG allows us to ask questions about Godot and GDScript without laboriously providing language and engine context, a lengthy system prompt, and other time-wasters we'd encounter with an unspecialized LLM. Let's test it with our first basic question without mentioning the engine or language.
 
-<img width="2560" height="1600" alt="image" src="https://github.com/user-attachments/assets/a44a2a60-1bf3-4169-a833-bd4818e2bffc" />
+<img width="2560" height="1600" alt="SimpleQuestion" src="https://github.com/user-attachments/assets/afc6dcc0-0765-45f6-8a96-313344741864" />
 
 Voilà! Our local, RAG-assisted LLM is now working perfectly. Towards the bottom of the screen, we can even see the source documentation files the LLM is referencing thanks to the metadata we attached to the chunk via `chunk_and_embed.py`.
 
 Let's ask it to produce some sample GDScript code.
 
-<img width="2560" height="1600" alt="image" src="https://github.com/user-attachments/assets/25b35408-eb94-4e0e-8d37-8f9332129331" />
+<img width="2560" height="1400" alt="ComplexQuestionPart1" src="https://github.com/user-attachments/assets/a8e18133-d76f-4782-984d-61f29c928800" />
 
-<img width="2559" height="1049" alt="image" src="https://github.com/user-attachments/assets/9f2cdbeb-3333-477f-904f-397904e294cc" />
+<img width="2559" height="941" alt="ComplexQuestionPart2" src="https://github.com/user-attachments/assets/1956abea-6016-4bd8-bd94-3e476ae4bc5e" />
 
 As we can see, the LLM is providing legitimate GDScript code for implementing WASD movement for our 2D character. It even provides supplementary information on assigning input maps in the project settings - a crucial step and another indicator that our RAG is working as intended.
 
