@@ -97,7 +97,7 @@ Open up a command prompt window, navigate to where the script is located, and ty
 
 <img width="2560" height="1600" alt="WebUI" src="https://github.com/user-attachments/assets/d47b980f-e48e-4016-aa62-ac6288209544" />
 
-The RAG allows us to ask questions about Godot and GDScript without laboriously providing language and engine context, a lengthy system prompt, and other time-wasters we'd encounter with an unspecialized LLM. Let's test it with our first basic question without mentioning the engine or language.
+Our retrieval-augmented approach allows us to ask questions about Godot and GDScript without laboriously providing language and engine context, a lengthy system prompt, and other time-wasters we'd encounter with an unspecialized LLM. Let's test it with our first basic question without mentioning the engine or language.
 
 <img width="2560" height="1600" alt="SimpleQuestion" src="https://github.com/user-attachments/assets/afc6dcc0-0765-45f6-8a96-313344741864" />
 
