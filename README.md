@@ -11,6 +11,7 @@ Lately, I've been wanting to create a local AI assistant to help me with learnin
 * [Godot's Offline Documentation Repository](https://docs.godotengine.org/en/stable/index.html)
 * [VSCode](https://code.visualstudio.com/)
 * [Claude Sonnet 4.6](https://claude.ai/)
+* [Python 3.14.3](https://www.python.org/downloads/)
 
 #### Python Libraries
 * [markdownify](https://pypi.org/project/markdownify/)
