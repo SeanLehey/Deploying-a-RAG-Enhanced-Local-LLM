@@ -112,7 +112,7 @@ Let's ask it to produce some sample GDScript code.
 As we can see, the LLM is providing legitimate GDScript code for implementing WASD movement for our 2D character. It even provides supplementary information on assigning input maps in the project settings - a crucial step and another indicator that our retrieval pipeline is working as intended.
 
 ## Final Thoughts
-In this project, we cleaned, chunked, embedded, and connected Godot's offline GDScript documentation repository to a local LLM, and demonstrated that it works as intended. The most important takeaway is that this methodology can be applied to other databases as well. Using textbooks, knowledge bases, and other long-form written content will achieve the same effect for various learning goals.
+In this project, we cleaned, chunked, and embedded Godot's offline GDScript documentation into a vector database to be referenced by a local LLM, and demonstrated that it works as intended. The most important takeaway is that this methodology can be applied to other databases as well. Using textbooks, knowledge bases, and other long-form written content will achieve the same effect for various learning goals.
 
 At the time of writing this in February of 2026, it's becoming clearer what role LLMs are going to play in the future of work. In my case, I utilize them to produce an initial codebase, and then iterate with my own input from that point forward according to the project plan I created. My next project will likely be an implementation of guardrails and supervisor agents for a local LLM, and then eventually creating custom alerting after setting up log ingestion with a tool like SOF ELK.
 
